@@ -20,8 +20,15 @@ const isAnimal = (req, res, next) =>{
 }
 app.get("/animal/:id", isAnimal,(req, res)=>{
 res.json({status: "success",
-message: true});
+          message: true});
 });
+
+
+
+app.get("/random/:floor/:ceil",(req,res)=>{
+    res.json({status: "success",
+              message: true})
+})
 
 app.listen(port,()=>{
     console.log("You are now listening to port " + port)
